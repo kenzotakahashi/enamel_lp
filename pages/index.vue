@@ -25,9 +25,16 @@
               <p>
                 enamel is a project management software that both engineers <em>and</em> business people can use to collaborate efficiently.
               </p>
-              <a class="signup" :href="url">Get started for free</a>
+              <div class="signup">
+                <a :href="url">Get started for free</a>                
+              </div>
+            </div>
+
+            <div class="image-container">
+              <img class="hero-image" src="../assets/img/UI.svg">
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -56,7 +63,7 @@ a {
 
 .container {
   min-height: 100vh;
-  background: linear-gradient(35deg, #7967b1, #4A4090);
+  // background: linear-gradient(35deg, #7967b1, #4A4090);
 
   /*display: flex;*/
 /*  justify-content: center;
@@ -74,7 +81,7 @@ nav {
 }
 
 .navbar-inner {
-  color: #fff;
+  // color: #fff;
   align-items: center;
   display: flex;
   font-size: 1.8rem;
@@ -125,11 +132,11 @@ ul.nav-links {
 
 .hero {
   position: relative;
-  padding: 100px 50px 50px;
+  padding-top: 100px;
   // background: linear-gradient(35deg, #7967b1, #4A4090);
   // height: 800px;
   // height: 100%;
-  color: #fff;
+  // color: #fff;
   overflow: hidden;
 }
 
@@ -146,14 +153,39 @@ ul.nav-links {
 }
 
 .inner-content {
+  display:flex;
   padding-top: 30px;
-  text-align: center;
+  // text-align: center;
   z-index: 99;
+}
+
+.inner-content > div {
+  flex: 1 1;
+}
+
+.info {
+  margin-left: 25px;
+}
+
+.image-container {
+  // margin-left: 25px;
+  margin: 25px;
+  position: relative;
+  height: 100%;
+}
+
+.hero-image {
+  // height: 100%;
+  // bottom: 0;
+  // left: 50%;
+  // margin-left: 4rem;
+  // position: absolute;
+  // top: 0;
 }
 
 .info > h1 {
   /*font-family: Georgia, serif;*/
-  margin: 30px 0;
+  margin: 0 0 30px 0;
   font-size: 60px;
   letter-spacing: 1px;
 }
@@ -167,12 +199,13 @@ ul.nav-links {
   margin-bottom: 30px;
 }
 
-a.signup {
+.signup > a {
   border: none;
   border-radius: 6px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
+  text-align: center;
   font-family: inherit;
   font-size: 1.3rem;
   font-weight: 600;
@@ -183,13 +216,14 @@ a.signup {
   text-decoration: none;
 
   color: #fff;
-  background-color: #409EFF;
+  background-color: #48f;
   border-color: #409EFF;
 }
 
 @media screen and (max-width: 800px) {
   .info > h1 {
-    font-size: 23px;
+    font-size: 43px;
+    text-align: center;
   }
 
   .info > p {
@@ -199,6 +233,29 @@ a.signup {
   .hero {
     padding-right: 10%;
     padding-left: 10%;
+  }
+
+  .inner-content {
+    display: initial;
+  }
+
+  .image-container {
+    margin: 10% 0; 
+  }
+
+  .info {
+    margin: 0;
+  }
+
+  .signup {
+    // display: block;
+    width: 220px;
+    margin: auto;
+  }
+
+  .signup > a {
+    width: 100%;
+    font-size: 1rem;
   }
 }
 
