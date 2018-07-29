@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'enamel',
+    title: 'No more meetings | enamel',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -15,6 +15,14 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans' },
     ]
   },
+  plugins: [
+    { src: '~plugins/drift.js', ssr: false }
+  ],
+  modules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-62716182-6'
+    }]
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -38,4 +46,3 @@ module.exports = {
     }
   }
 }
-
